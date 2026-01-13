@@ -1,0 +1,31 @@
+# Basics
+.git
+.gitignore
+.dockerignore
+
+# Dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log*
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Next.js build output
+.next
+out
+build
+dist
+
+# Environment variables (secrets should not be in image)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker files
+Dockerfile
+Dockerfile.dev
+docker-compose.yml

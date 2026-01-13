@@ -1,0 +1,16 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: billtrackpro_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      # Browser runs on host, so localhost:8080 works for client-side fetch.
+      # For server-side fetch, we might need host.docker.internal depending on OS, 
+      # but standard localhost usually suffice for browser-centric apps or if network_mode is host.
+      - NEXT_PUBLIC_API_URL=http://localhost:8080/api
